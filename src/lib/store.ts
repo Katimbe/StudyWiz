@@ -1,5 +1,6 @@
 "use client";
 
+import { useShallow } from "zustand/react/shallow";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { uid } from "./utils";
@@ -92,7 +93,7 @@ const defaultProfile: UserProfile = {
 
 export const useStudyGenieStore = create<StudyGenieState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       hydrated: false,
       profile: defaultProfile,
       courses: [],
@@ -240,5 +241,5 @@ export const useStudyGenieStore = create<StudyGenieState>()(
 );
 
 export function useHydrated() {
-  return useStudyGenieStore((s) => s.hydrated);
+  return useStudyGenieStore(useShallow((s) => s.hydrated));
 }

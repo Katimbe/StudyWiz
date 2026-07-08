@@ -18,6 +18,7 @@ import {
   Plus,
 } from "lucide-react";
 import { useMemo } from "react";
+import { useShallow } from "zustand/react/shallow";
 import { useStudyGenieStore, useHydrated } from "@/lib/store";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -40,13 +41,13 @@ const ZERO_ACTIONS = [
 
 export default function HomePage() {
   const hydrated = useHydrated();
-  const profile = useStudyGenieStore((s) => s.profile);
-  const courses = useStudyGenieStore((s) => s.courses.filter((c) => !c.archived));
-  const assignments = useStudyGenieStore((s) => s.assignments);
-  const materials = useStudyGenieStore((s) => s.materials);
-  const masteryTopics = useStudyGenieStore((s) => s.masteryTopics);
-  const studyTasks = useStudyGenieStore((s) => s.studyTasks);
-  const flashcardSets = useStudyGenieStore((s) => s.flashcardSets);
+  const profile = useStudyGenieStore(useShallow((s) => s.profile));
+  const courses = useStudyGenieStore(useShallow((s) => s.courses.filter((c) => !c.archived)));
+  const assignments = useStudyGenieStore(useShallow((s) => s.assignments));
+  const materials = useStudyGenieStore(useShallow((s) => s.materials));
+  const masteryTopics = useStudyGenieStore(useShallow((s) => s.masteryTopics));
+  const studyTasks = useStudyGenieStore(useShallow((s) => s.studyTasks));
+  const flashcardSets = useStudyGenieStore(useShallow((s) => s.flashcardSets));
 
   const greetingWord = useMemo(() => {
     const h = new Date().getHours();

@@ -4,11 +4,12 @@ import { usePathname } from "next/navigation";
 import { Sparkles } from "lucide-react";
 import { NAV_ITEMS } from "@/lib/nav";
 import { cn } from "@/lib/utils";
+import { useShallow } from "zustand/react/shallow";
 import { useStudyGenieStore } from "@/lib/store";
 
 export function Sidebar() {
   const pathname = usePathname();
-  const plan = useStudyGenieStore((s) => s.profile.plan);
+  const plan = useStudyGenieStore(useShallow((s) => s.profile.plan));
 
   return (
     <aside className="sticky top-0 hidden h-dvh w-64 shrink-0 flex-col border-r border-border bg-background-elevated/60 backdrop-blur-xl lg:flex">

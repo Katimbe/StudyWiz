@@ -1,17 +1,15 @@
 "use client";
 import Link from "next/link";
 import { Plus, Sun, Moon } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { useShallow } from "zustand/react/shallow";
 import { useStudyGenieStore } from "@/lib/store";
 import { initials } from "@/lib/utils";
 
 export function TopBar() {
-  const profile = useStudyGenieStore((s) => s.profile);
-  const updateProfile = useStudyGenieStore((s) => s.updateProfile);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  const profile = useStudyGenieStore(useShallow((s) => s.profile));
+  const updateProfile = useStudyGenieStore(useShallow((s) => s.updateProfile));
 
   useEffect(() => {
     document.documentElement.classList.toggle("light", profile.theme === "light");
@@ -38,16 +36,14 @@ export function TopBar() {
             <Plus className="h-4 w-4" />
           </Link>
         </Button>
-        {mounted && (
-          <Button
-            variant="subtle"
-            size="icon"
-            aria-label="Toggle theme"
-            onClick={() => updateProfile({ theme: profile.theme === "dark" ? "light" : "dark" })}
-          >
-            {profile.theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-          </Button>
-        )}
+        <Button
+          variant="subtle"
+          size="icon"
+          aria-label="Toggle theme"
+          onClick={() => updateProfile({ theme: profile.theme === "dark" ? "light" : "dark" })}
+        >
+          {profile.theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+        </Button>
         <Link
           href="/settings"
           className="focus-ring flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface text-xs font-semibold text-foreground hover:bg-surface-hover"

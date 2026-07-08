@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useShallow } from "zustand/react/shallow";
 import { useStudyGenieStore } from "@/lib/store";
 import type { EducationLevel, LearningStyle } from "@/lib/types";
 import { uid } from "@/lib/utils";
@@ -24,7 +25,7 @@ const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 export function CreateCourseDialog({ trigger }: { trigger: React.ReactNode }) {
   const router = useRouter();
-  const addCourse = useStudyGenieStore((s) => s.addCourse);
+  const addCourse = useStudyGenieStore(useShallow((s) => s.addCourse));
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [subject, setSubject] = useState("");
