@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-# Domain is a placeholder until the production URL is confirmed.
-Sitemap: https://www.kopalamedia.com/sitemap.xml
+Sitemap: https://kopalmedia.com/sitemap.xml

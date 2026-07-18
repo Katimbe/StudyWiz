@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- NOTE: domain is a placeholder until the production URL is confirmed —
-     update src/config/site.ts (site.url) and regenerate. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.kopalamedia.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.kopalamedia.com/about</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kopalamedia.com/services</loc><priority>0.9</priority></url>
-  <url><loc>https://www.kopalamedia.com/services/business-response-system</loc><priority>0.9</priority></url>
-  <url><loc>https://www.kopalamedia.com/services/website-design</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kopalamedia.com/services/crm-lead-management</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kopalamedia.com/services/business-automation</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kopalamedia.com/services/ai-assisted-systems</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kopalamedia.com/services/marketing-content</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kopalamedia.com/services/custom-digital-tools</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kopalamedia.com/packages</loc><priority>0.9</priority></url>
-  <url><loc>https://www.kopalamedia.com/industries</loc><priority>0.7</priority></url>
-  <url><loc>https://www.kopalamedia.com/work</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kopalamedia.com/work/chipiliro-khonje-photography</loc><priority>0.7</priority></url>
-  <url><loc>https://www.kopalamedia.com/work/fix-it-chichi</loc><priority>0.7</priority></url>
-  <url><loc>https://www.kopalamedia.com/process</loc><priority>0.7</priority></url>
-  <url><loc>https://www.kopalamedia.com/assessment</loc><priority>0.9</priority></url>
-  <url><loc>https://www.kopalamedia.com/book</loc><priority>0.9</priority></url>
-  <url><loc>https://www.kopalamedia.com/contact</loc><priority>0.8</priority></url>
-  <url><loc>https://www.kopalamedia.com/faq</loc><priority>0.6</priority></url>
-  <url><loc>https://www.kopalamedia.com/privacy</loc><priority>0.3</priority></url>
-  <url><loc>https://www.kopalamedia.com/terms</loc><priority>0.3</priority></url>
-  <url><loc>https://www.kopalamedia.com/accessibility</loc><priority>0.3</priority></url>
+  <url><loc>https://kopalmedia.com/</loc><priority>1.0</priority></url>
+  <url><loc>https://kopalmedia.com/about</loc><priority>0.8</priority></url>
+  <url><loc>https://kopalmedia.com/services</loc><priority>0.9</priority></url>
+  <url><loc>https://kopalmedia.com/services/business-response-system</loc><priority>0.9</priority></url>
+  <url><loc>https://kopalmedia.com/services/website-design</loc><priority>0.8</priority></url>
+  <url><loc>https://kopalmedia.com/services/crm-lead-management</loc><priority>0.8</priority></url>
+  <url><loc>https://kopalmedia.com/services/business-automation</loc><priority>0.8</priority></url>
+  <url><loc>https://kopalmedia.com/services/ai-assisted-systems</loc><priority>0.8</priority></url>
+  <url><loc>https://kopalmedia.com/services/marketing-content</loc><priority>0.8</priority></url>
+  <url><loc>https://kopalmedia.com/services/custom-digital-tools</loc><priority>0.8</priority></url>
+  <url><loc>https://kopalmedia.com/packages</loc><priority>0.9</priority></url>
+  <url><loc>https://kopalmedia.com/industries</loc><priority>0.7</priority></url>
+  <url><loc>https://kopalmedia.com/work</loc><priority>0.8</priority></url>
+  <url><loc>https://kopalmedia.com/work/chipiliro-khonje-photography</loc><priority>0.7</priority></url>
+  <url><loc>https://kopalmedia.com/work/fix-it-chichi</loc><priority>0.7</priority></url>
+  <url><loc>https://kopalmedia.com/process</loc><priority>0.7</priority></url>
+  <url><loc>https://kopalmedia.com/assessment</loc><priority>0.9</priority></url>
+  <url><loc>https://kopalmedia.com/book</loc><priority>0.9</priority></url>
+  <url><loc>https://kopalmedia.com/contact</loc><priority>0.8</priority></url>
+  <url><loc>https://kopalmedia.com/faq</loc><priority>0.6</priority></url>
+  <url><loc>https://kopalmedia.com/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://kopalmedia.com/terms</loc><priority>0.3</priority></url>
+  <url><loc>https://kopalmedia.com/accessibility</loc><priority>0.3</priority></url>
 </urlset>

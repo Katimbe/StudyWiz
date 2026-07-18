@@ -20,7 +20,7 @@ export const site = {
     "Kopala Media is a digital transformation and business-growth systems company that helps small and medium-sized businesses become more visible, operate more efficiently, capture more customer opportunities, and reduce administrative workload.",
 
   // Contact — TODO(OWNER): supply official contact details
-  email: "", // e.g. hello@kopalamedia.com — shown publicly only when set
+  email: "", // e.g. hello@kopalmedia.com — shown publicly only when set
   phone: "", // e.g. +1 (847) 555-0100 — shown publicly only when set
 
   // Location & service area
@@ -40,9 +40,8 @@ export const site = {
   ],
   timeZone: "America/Chicago (Central Time)",
 
-  // Production URL — TODO(OWNER): set when domain is confirmed (used for
-  // canonical URLs, sitemap and Open Graph tags)
-  url: "https://www.kopalamedia.com",
+  // Production URL — used for canonical URLs, sitemap and Open Graph tags.
+  url: "https://kopalmedia.com",
 
   // Booking — TODO(OWNER): supply provider link to activate the live scheduler
   // (Calendly / Cal.com / Google Calendar appointment page). Until set, the
