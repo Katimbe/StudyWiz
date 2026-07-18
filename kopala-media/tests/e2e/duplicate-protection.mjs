@@ -1,0 +1,20 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const p = await b.newPage();
+const fillAndSend = async () => {
+  await p.goto('http://localhost:4173/contact', { waitUntil: 'networkidle' });
+  await p.getByLabel('Full name').fill('Dup Case');
+  await p.getByLabel('Email', { exact: true }).fill('dup@example.com');
+  await p.getByLabel(/How can we help/).fill('Identical message for duplicate check.');
+  await p.waitForTimeout(1700);
+  await p.getByRole('checkbox').check();
+  await p.click('button:has-text("Send Message")');
+  await p.waitForTimeout(2000);
+};
+await fillAndSend();
+console.log('first:', (await p.textContent('body')).includes('Thank you'));
+await fillAndSend();
+console.log('duplicate detected:', (await p.textContent('body')).includes('already got your'));
+const leads = await p.evaluate(() => JSON.parse(localStorage.getItem('km.leads.v1')).filter(l => l.email === 'dup@example.com').length);
+console.log('leads stored for dup@example.com:', leads);
+await b.close();
